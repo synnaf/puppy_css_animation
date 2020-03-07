@@ -1,0 +1,146 @@
+/*color specs*/
+$puppy-color:orange;
+$puppy-ear:rgba(199, 159, 106, 0.844); 
+$puppy-shadow: rgba(199, 159, 106, 0.844);
+/*box borders*/ 
+$borders: 1.5rem; 
+$borders-legs:2rem;  
+
+
+body {
+    background-color: whitesmoke;
+    height:100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .background-page {
+        display:flex; 
+        flex-direction:column;
+     
+        .puppy-top {
+            display:flex;
+            flex-direction:row;
+            justify-content:start;
+
+            .puppy-snoot {
+                background-color:$puppy-color;
+                margin-top:90px;
+                height:100px;
+                width:100px;
+                border-radius:1rem 0 0 4rem;
+                .nose{
+                    background-color:black;
+                    height:25px;
+                    width:25px;
+                    border-radius:45% 45% 20% 50%;
+                }
+                .tounge{
+                    margin-top:50px;
+                    background-color:lightpink;
+                    width:30px;
+                    height:70px;
+                    border-radius:9rem 2rem 6rem 5rem;
+                    animation: tounge 0.5s infinite; 
+                }  
+            }
+            .puppy-head {
+                align-self:auto;
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+                height:200px;
+                width:220px;
+                background-color:$puppy-color; 
+                border-radius:4rem 3rem 0 0; 
+                .puppy-ear {
+                    height:120px;
+                    width:60px;
+                    background-color:$puppy-ear;
+                    border-radius:$borders; 
+                    animation: ear-flop 0.7s infinite; 
+                }
+                .puppy-eye {
+                    background-color:black;
+                    width:10px;
+                    height:50px;
+                    margin-top:30px;
+                    margin-right:30px; 
+                }
+            }
+        }
+        .puppy-body {
+            height:350px;
+            width:550px;
+            background-color:$puppy-color; 
+            border-radius:6rem 6rem 6rem 6rem;
+            animation: jump-body 0.5s infinite; 
+
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: end;
+
+            .tail {
+                background-color: $puppy-ear;
+                width:40px;
+                height:100px;
+                border-radius:5rem 5rem 0 10rem;
+               
+            }
+        }
+        .legs-container {
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            
+            .puppy-leg-left {
+                height:150px;
+                width:150px;
+                background-color:$puppy-color;
+                border-radius: 0 0 $borders-legs $borders-legs;  
+                animation: jump-up 0.5s infinite;  
+            }
+            .puppy-leg-right {
+                height:150px;
+                width:150px;
+                background-color:$puppy-color;
+                border-radius: 0 0 $borders-legs $borders-legs; 
+                animation: jump-up 0.5s infinite;
+
+                
+            }
+        }
+    }
+} 
+
+
+@keyframes jump-up {
+    10% {height: 130px;}
+    30% {height: 70px;}
+    40% {height:65px;
+        width: 170px;}
+    50% {height: 70px;}
+    50% {transform: translateX(5px)};
+    70% {height:100px;}
+    80% {height: 130px;}
+}
+@keyframes jump-body {
+    20% {transform: translate(2px);}
+    50% {transform: translateX(5px)};
+    60% {transform: rotate(2deg)}; 
+    70% {transform: translateX(2px)};
+}
+
+@keyframes ear-flop {
+    10% {border-radius:1.5rem 1.5rem 3rem 2.5rem;}
+}
+
+@keyframes tounge {
+    20% {transform: rotate(1deg);}
+    30% {transform: rotate(3deg)};
+    50% {transform: rotate(5deg)};
+    60% {transform: rotate(3deg)}; 
+    80% {transform: rotate(1deg)};
+}
+

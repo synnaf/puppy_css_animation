@@ -1,0 +1,162 @@
+/*color specs*/
+/*box borders*/
+body {
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .background-page {
+  display: flex;
+  flex-direction: column;
+}
+body .background-page .puppy-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+body .background-page .puppy-top .puppy-snoot {
+  background-color: orange;
+  margin-top: 90px;
+  height: 100px;
+  width: 100px;
+  border-radius: 1rem 0 0 4rem;
+}
+body .background-page .puppy-top .puppy-snoot .nose {
+  background-color: black;
+  height: 25px;
+  width: 25px;
+  border-radius: 45% 45% 20% 50%;
+}
+body .background-page .puppy-top .puppy-snoot .tounge {
+  margin-top: 50px;
+  background-color: lightpink;
+  width: 30px;
+  height: 70px;
+  border-radius: 9rem 2rem 6rem 5rem;
+  animation: tounge 0.5s infinite;
+}
+body .background-page .puppy-top .puppy-head {
+  align-self: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+  width: 220px;
+  background-color: orange;
+  border-radius: 4rem 3rem 0 0;
+}
+body .background-page .puppy-top .puppy-head .puppy-ear {
+  height: 120px;
+  width: 60px;
+  background-color: rgba(199, 159, 106, 0.844);
+  border-radius: 1.5rem;
+  animation: ear-flop 0.7s infinite;
+}
+body .background-page .puppy-top .puppy-head .puppy-eye {
+  background-color: black;
+  width: 10px;
+  height: 50px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+body .background-page .puppy-body {
+  height: 350px;
+  width: 550px;
+  background-color: orange;
+  border-radius: 6rem 6rem 6rem 6rem;
+  animation: jump-body 0.5s infinite;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+}
+body .background-page .puppy-body .tail {
+  background-color: rgba(199, 159, 106, 0.844);
+  width: 40px;
+  height: 100px;
+  border-radius: 5rem 5rem 0 10rem;
+}
+body .background-page .legs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+body .background-page .legs-container .puppy-leg-left {
+  height: 150px;
+  width: 150px;
+  background-color: orange;
+  border-radius: 0 0 2rem 2rem;
+  animation: jump-up 0.5s infinite;
+}
+body .background-page .legs-container .puppy-leg-right {
+  height: 150px;
+  width: 150px;
+  background-color: orange;
+  border-radius: 0 0 2rem 2rem;
+  animation: jump-up 0.5s infinite;
+}
+
+@keyframes jump-up {
+  10% {
+    height: 130px;
+  }
+  30% {
+    height: 70px;
+  }
+  40% {
+    height: 65px;
+    width: 170px;
+  }
+  50% {
+    height: 70px;
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    height: 100px;
+  }
+  80% {
+    height: 130px;
+  }
+}
+@keyframes jump-body {
+  20% {
+    transform: translate(2px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: translateX(2px);
+  }
+}
+@keyframes ear-flop {
+  10% {
+    border-radius: 1.5rem 1.5rem 3rem 2.5rem;
+  }
+}
+@keyframes tounge {
+  20% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
